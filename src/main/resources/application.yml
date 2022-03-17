@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+
+spring:
+  profiles: 
+    active: dev
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: postgres123
+    url: jdbc:postgresql://localhost:5432/PMSTEST
+    username: postgres
+  jpa:
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+       ddl-auto: update 
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format.sql: true
+        hbm2ddl:
+          import_files: import.sql
+    
